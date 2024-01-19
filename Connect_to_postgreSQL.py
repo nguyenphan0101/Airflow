@@ -1,3 +1,13 @@
+# Add to the last into service:
+#                  postgres: 
+# in docker-compose.yaml (code below) ==>
+#    ports:
+#      - 5433:5432
+#   extra_hosts:
+#     - "host.docker.internal:host-gateway"
+#
+  
+
 from airflow import DAG
 from datetime import datetime
 from airflow.providers.postgres.operators.postgres import PostgresOperator
