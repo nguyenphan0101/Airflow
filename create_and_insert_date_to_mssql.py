@@ -1,3 +1,9 @@
+
+
+
+#Add into docker-compose.yaml
+# _PIP_ADDITIONAL_REQUIREMENTS: ${_PIP_ADDITIONAL_REQUIREMENTS:- apache-airflow-providers-docker apache-airflow-providers-microsoft-mssql}
+
 from airflow import DAG
 from datetime import datetime
 from airflow.providers.microsoft.mssql.hooks.mssql import MsSqlHook
