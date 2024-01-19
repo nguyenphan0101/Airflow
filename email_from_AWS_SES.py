@@ -1,3 +1,11 @@
+#Add to docker-compose.yaml
+#Send email from AWS SES
+    #AIRFLOW__EMAIL__EMAIL_BACKEND: airflow.providers.amazon.aws.utils.emailer.send_email
+    #AIRFLOW__EMAIL__EMAIL_CONN_ID: aws_default
+    #AIRFLOW__EMAIL__MAIL_FROM: From email nguyenphan01012002@gmail.com  #success@simulator.amazones.com
+    #AIRFLOW__EMAIL__FROM_EMAIL: nguyenphan01012002@gmail.com #success@simulator.amazones.com
+    #AIRFLOW__EMAIL__SMTP_HOST: email-smtp.ap-southeast-1.amazonaws.com
+
 from airflow import DAG
 from datetime import datetime
 import io
@@ -15,3 +23,5 @@ with DAG(dag_id="Email_From_AWS_SES",start_date=datetime(2024,1,1),schedule_inte
     )
 
 email_function
+
+
